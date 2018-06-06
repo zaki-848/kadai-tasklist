@@ -13,7 +13,9 @@
           <p>ステータス：<%= task.status %></p>
         </div>
         <div>
+          
           <% if current_user == task.user %>
+        　　  <%= link_to task.id, task %> 
             <%= link_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
         </div>
