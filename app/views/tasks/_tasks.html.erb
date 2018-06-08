@@ -15,7 +15,7 @@
         <div>
           
           <% if current_user == task.user %>
-        　　  <%= link_to task.id, task %> 
+            <%= link_to 'このタスクを編集する', edit_task_path(task) %>
             <%= link_to "Delete", task, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
         </div>
@@ -24,3 +24,4 @@
   <% end %>
   <%= paginate tasks %>
 </ul>
+
